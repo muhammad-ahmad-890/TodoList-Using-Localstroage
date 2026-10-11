@@ -1,0 +1,201 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef2ff, #f8fafc);
+            color: #1e293b;
+        }
+
+        .box {
+            width: 100%;
+            max-width: 650px;
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.10);
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 30px;
+            margin-bottom: 7px;
+            color: #0f172a;
+        }
+
+        .header p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* Add task */
+        .task-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .task-form input {
+            flex: 1;
+            min-width: 0;
+            padding: 14px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            transition: 0.2s;
+            background: #f8fafc;
+        }
+
+        .task-form input:focus {
+            border-color: #6366f1;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.10);
+        }
+
+        .add-btn {
+            border: none;
+            padding: 0 22px;
+            border-radius: 10px;
+            background: #6366f1;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .add-btn:hover {
+            background: #4f46e5;
+            transform: translateY(-1px);
+        }
+
+        /* Table */
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8fafc;
+        }
+
+        th {
+            padding: 13px 15px;
+            text-align: left;
+            color: #64748b;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 14px;
+        }
+
+        tbody tr {
+            transition: 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #fafafa;
+        }
+
+        td:first-child {
+            color: #334155;
+            font-weight: 500;
+        }
+
+        /* Action buttons */
+        .action-buttons {
+            display: flex;
+            gap: 7px;
+        }
+
+        .action-buttons button {
+            border: none;
+            padding: 7px 12px;
+            border-radius: 7px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .edit-btn {
+            background: #eef2ff;
+            color: #4f46e5;
+        }
+
+        .edit-btn:hover {
+            background: #e0e7ff;
+        }
+
+        .delete-btn {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+
+        .delete-btn:hover {
+            background: #fee2e2;
+        }
+
+        /* Empty state */
+        .empty {
+            text-align: center;
+            padding: 30px 10px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+        @media (max-width: 550px) {
+            .box {
+                padding: 22px;
+                border-radius: 15px;
+            }
+
+            .header h1 {
+                font-size: 25px;
+            }
+
+            .task-form {
+                flex-direction: column;
+            }
+
+            .task-form input {
+                width: 100%;
+            }
+
+            .add-btn {
+                height: 45px;
+            }
+
+            th,
+            td {
+                padding: 12px 8px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+        }

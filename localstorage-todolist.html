@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Todo List</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div class="header">
+            <h1>My Todo List</h1>
+            <p>Keep track of your tasks and stay organized.</p>
+        </div>
+
+        <form class="task-form" id="todoForm">
+
+            <input type="text" id="taskInput" placeholder="What needs to be done?" autocomplete="off">
+
+            <button class="add-btn" id="submit" type="submit">
+                + Add Task
+            </button>
+
+        </form>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="taskOutput">
+
+                </tbody>
+
+            </table>
+
+            <div class="empty" id="emptyMessage">
+                No tasks yet. Add your first task!
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="assets/app.js"></script>
+
+</body>
+
+</html>
